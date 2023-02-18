@@ -1,9 +1,9 @@
 var config = {
     style: 'mapbox://styles/jmasselink/cldzeoc0g005e01lc5830y7pr',
-    accessToken: 'pk.eyJ1Ijoiam1hc3NlbGluayIsImEiOiJabWhkUG5NIn0.6xSjdgz2QoNbWb-7F4BqDg',
+    accessToken: 'pk.eyJ1Ijoiam1hc3NlbGluayIsImEiOiJjbGU3eWllcmcwYTJnM29taG51dnV4NDhxIn0.fvnE_Pf3T6kKOt7TUeuubw',
     showMarkers: true,
     markerColor: '#3FB1CE',
-    //projection: 'equirectangular',
+    // projection: 'equirectangular',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
@@ -53,10 +53,10 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [28.131101, 1.331721],
+                center: [28.531101, 1.531721],
                 zoom: 8.5,
-                pitch: 60,
-                bearing: -43.2,
+                pitch: 30,
+                bearing: 0
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
                 // slowly and zoom out almost completely before starting
@@ -65,7 +65,7 @@ var config = {
                 //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -78,7 +78,7 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [6.15116, 46.20595],
+                center: [28.131101, 1.331721],
                 zoom: 12.52,
                 pitch: 8.01,
                 bearing: 0.00
