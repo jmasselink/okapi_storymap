@@ -32,11 +32,34 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                {
+                    layer: 'admin-1-boundary',
+                    opacity: 0,
+                },
+                {
+                    layer: 'admin-1-boundary-bg',
+                    opacity: 0,
+                },
+                {
+                    layer: 'landuse-overlay-outline',
+                    opacity: 0,
+                },
+                {
+                    layer: 'landuse-overlay',
+                    opacity: 0,
+                },
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0,
+                },
+                {
+                    layer: 'rfo-limits-artificial',
+                    opacity: 0,
+                },
+                {
+                    layer: 'rfo-limits-natural',
+                    opacity: 0,
+                },
             ],
             onChapterExit: [
                 // {
