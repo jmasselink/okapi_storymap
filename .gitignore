@@ -63,3 +63,6 @@ typings/
 
 # development config.js files
 /src/config.js.template
+
+# ideas / roadmap
+TODO.md
