@@ -2,18 +2,25 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Mapbox Storytelling</title>
+    <title>Okapi Storymap</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+<!-- added Muli fonts using Adobe -->
+    <link rel="stylesheet" href="https://use.typekit.net/sxf5fkl.css">
     <style>
         body {
             margin:0;
             padding:0;
-            font-family: sans-serif;
+            font-family: 'Muli', sans-serif;
         }
         a, a:hover, a:visited {
             color: #0071bc;
@@ -44,6 +51,18 @@
                 display: none;
             }
         }
+        /* #header {
+            background-color: #444;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0.9;
+            width: 100%;
+        } */
         #header {
             margin: auto;
             width: 100%;
