@@ -143,12 +143,6 @@ var config = {
                 zoom: 7.5,
                 pitch: 20,
                 bearing: 0
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -168,6 +162,11 @@ var config = {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.4,
                 },
+                {
+                    layer: 'waterway',
+                    opacity: 0.1,
+                },
+                
             ]
         },
         {
@@ -178,10 +177,10 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [28.00, 1.331721],
-                zoom: 10.52,
-                pitch: 8.01,
-                bearing: 0.00
+                center: [28.531101, 1.531721],
+                zoom: 8.5,
+                pitch: 20,
+                bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -189,14 +188,18 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'rfo-limits-natural',
-                    opacity: 0.0,
-                },                
+                    opacity: 0.8,
+                },
+                {
+                    layer: 'rfo-limits-artificial',
+                    opacity: 0.8,
+                },                  
             ],
             onChapterExit: [
-                {
-                    layer: 'rfo-limits-natural',
-                    opacity: 0.6,
-                },  
+                // {
+                //     layer: 'rfo-limits-natural',
+                //     opacity: 0.6,
+                // },  
             ]
         },
         {
@@ -207,10 +210,10 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [28.00, 1.331721],
-                zoom: 10.52,
-                pitch: 8.01,
-                bearing: 0.00
+                center: [28.531101, 1.531721],
+                zoom: 8.0,
+                pitch: 10,
+                bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -236,17 +239,21 @@ var config = {
             image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-                center: [28.00, 1.331721],
-                zoom: 10.52,
-                pitch: 8.01,
-                bearing: 0.00
+                center: [28.531101, 1.531721],
+                zoom: 8.0,
+                pitch: 0,
+                bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                // {
+                //     layer: 'rfo-limits-artificial',
+                //     opacity: 0.8,
+                // },
                 {
-                    layer: 'rfo-limits-artificial',
+                    layer: 'rfo-cami',
                     opacity: 0.8,
                 },                
             ],
@@ -266,15 +273,9 @@ var config = {
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
-                zoom: 8.0,
-                pitch: 10,
+                zoom: 8.5,
+                pitch: 0,
                 bearing: 0
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -308,19 +309,37 @@ var config = {
                     layer: 'settlement-minor-label',
                     opacity: 0.0,
                 },
+                {
+                    layer: 'active-exploitation-line',
+                    opacity: 1,
+                },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 1,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 1,
+                },
             ],
             onChapterExit: []
         },
         {
             id: 'ch7',
-            alignment: 'fully',
+            alignment: 'left',
             hidden: false,
             title: '7. Expansion of semi-industrial causing permanent damages',
             image: '/assets/rfo_gfw_alerts_confidence.gif',
             description: 'Copy these sections to add to your story.',
+            // location: {
+            //     center: [28.131101, 1.331721],
+            //     zoom: 12.52,
+            //     pitch: 8.01,
+            //     bearing: 0.00
+            // },
             location: {
-                center: [28.131101, 1.331721],
-                zoom: 12.52,
+                center: [28.00, 1.331721],
+                zoom: 10.52,
                 pitch: 8.01,
                 bearing: 0.00
             },
