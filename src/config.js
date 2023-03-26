@@ -84,6 +84,10 @@ var config = {
                     layer: 'poi-label',
                     opacity: 0.0,
                 },
+                {
+                    layer: 'gfw-alerts',
+                    opacity: 0.0,
+                },
             ],
             onChapterExit: [
                 // {
@@ -347,10 +351,10 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'rfo-limits-artificial',
-                //     opacity: 0.8,
-                // },                
+                {
+                    layer: 'gfw-alerts',
+                    opacity: 0.8,
+                },               
             ],
             onChapterExit: [
                 // {
