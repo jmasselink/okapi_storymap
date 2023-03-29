@@ -20,7 +20,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: '0. DRC: a megadiverse nation of natural wealth',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'The Democratic Republic of the Congo is blessed with biodiversity, abundant natural resources, and diverse habitats. Home to nearly a hundred million people, the DRC also has hundreds of ethnic groups. Even within the country, there are 4 primary national languages: Kikongo, Kiluba, Kiswahili, and Lingala.',
             location: {
                 center: [21, -3],
@@ -101,7 +101,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: '1. Ituri Forest: a refuge for indigenous livelihoods and wildlife alike',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'A refuge for indigenous livelihoods and wildlife alike.',
             location: {
                 center: [28.531101, 1.531721],
@@ -140,7 +140,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: '2. Delicate trust and fragile peace',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
@@ -178,7 +178,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: '3. Boundaries both real and imaginary',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
@@ -211,7 +211,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: '4. Challenges in the Reserve',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
@@ -240,8 +240,8 @@ var config = {
             alignment: 'fully',
             hidden: false,
             title: '5. An erroneous map changes the balance',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
+            // image: './path/to/image/source.png',
+            description: 'Well-known for mineral deposits, Ituri Province boasts gold-bearing belts which have been the source of many gold rushes that attract speculators from near and far. Within the Reserve, The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary sunken inwards about 14 miles, and the northern boundary about 16, and the southern about 8 miles.',
             location: {
                 center: [28.531101, 1.531721],
                 zoom: 8.0,
@@ -273,7 +273,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: '6. The incongruence of mining concessions in a World Heritage site',
-            image: './path/to/image/source.png',
+            // image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
@@ -356,55 +356,50 @@ var config = {
                     opacity: 0.8,
                 },               
             ],
+            onChapterExit: []
+        },
+                {
+            id: 'unesco',
+            alignment: 'left',
+            hidden: true,
+            title: '0. World Heritage in Danger',
+            image: './path/to/image/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+                    center: [24, -1],
+                    zoom: 6,
+                    pitch: 20,
+                    bearing: 0,
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                //speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'unesco-sites',
+                    opacity: 0.8,
+                },
+                {
+                    layer: 'landcover',
+                    opacity: 0.2, 
+                },
+            ],
             onChapterExit: [
-                // {
-                //     layer: 'rfo-limits-artificial',
-                //     opacity: 0.6,
-                // },  
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.4,
+                },
+                {
+                    layer: 'unesco-sites',
+                    opacity: 0.1,
+                },
             ]
         },
-                // {
-        //     id: 'unesco',
-        //     alignment: 'left',
-        //     hidden: false,
-        //     title: '0. World Heritage in Danger',
-        //     image: './path/to/image/source.png',
-        //     description: 'Copy these sections to add to your story.',
-        //     location: {
-        //             center: [24, -1],
-        //             zoom: 6,
-        //             pitch: 20,
-        //             bearing: 0,
-        //         // flyTo additional controls-
-        //         // These options control the flight curve, making it move
-        //         // slowly and zoom out almost completely before starting
-        //         // to pan.
-        //         //speed: 2, // make the flying slow
-        //         //curve: 1, // change the speed at which it zooms out
-        //     },
-        //     mapAnimation: 'flyTo',
-        //     rotateAnimation: false,
-        //     callback: '',
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'unesco-sites',
-        //             opacity: 0.8,
-        //         },
-        //         {
-        //             layer: 'landcover',
-        //             opacity: 0.2, 
-        //         },
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'rfo-limits-polygon',
-        //             opacity: 0.4,
-        //         },
-        //         {
-        //             layer: 'unesco-sites',
-        //             opacity: 0.1,
-        //         },
-        //     ]
-        // },
     ]
 };

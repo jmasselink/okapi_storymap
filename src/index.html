@@ -64,6 +64,7 @@
             width: 100%;
         } */
         #header {
+            margin: 0; 
             margin: auto;
             width: 100%;
             position: relative;
@@ -86,14 +87,15 @@
             z-index: 5;
         }
         #features {
-            padding-top: 10vh;
-            padding-bottom: 10vh;
+            text-align: left;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
         }
         .hidden {
             visibility: hidden;
         }
         .centered {
-            width: 50vw;
+            width: 40vw;
             margin: 0 auto;
         }
         .lefty {
@@ -106,7 +108,7 @@
         }
         .fully {
             width: 100%;
-            margin: auto;
+            margin: 1vw auto;
         }
         .light {
             color: #444;
@@ -118,7 +120,7 @@
         }
         .step {
             padding-bottom: 50vh;
-            /* margin-bottom: 10vh; */
+            margin-bottom: 150vh;
             opacity: 0.25;
         }
         .step.active {
@@ -126,13 +128,15 @@
         }
 
         .step div {
-            padding:  25px 50px;
+            padding:  15px 20px;
             line-height: 25px;
             font-size: 13px;
         }
 
         .step img {
             width: 100%;
+            height: auto;
+            max-width: 100%;
         }
 
         @media (max-width: 750px) {
