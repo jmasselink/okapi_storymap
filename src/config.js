@@ -7,7 +7,7 @@ var config = {
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
-    theme: 'dark',
+    theme: 'light',
     use3dTerrain: true, //set true for enabling 3D maps.
     auto: false,
     title: 'If a mine grows in the forest...',
@@ -21,7 +21,7 @@ var config = {
             hidden: false,
             title: '0. DRC: a megadiverse nation of natural wealth',
             // image: './path/to/image/source.png',
-            description: 'The Democratic Republic of the Congo is blessed with biodiversity, abundant natural resources, and diverse habitats. Home to nearly a hundred million people, the DRC also has hundreds of ethnic groups. Even within the country, there are 4 primary national languages: Kikongo, Kiluba, Kiswahili, and Lingala.',
+            description: 'The Democratic Republic of the Congo is blessed with biodiversity, abundant natural resources, and diverse habitats. Home to an estimated hundred million people, the DRC has young, rapidly growing population, which represent hundreds of ethnic groups. Despite this, DRC ranks near the bottom (179/191) on the <a href="https://hdr.undp.org/data-center/specific-country-data#/countries/COD">Human Development Index</a> and most of DRC’s people live in extreme poverty.',
             location: {
                 center: [21, -3],
                 zoom: 4,
@@ -45,11 +45,23 @@ var config = {
                     opacity: 0,
                 },
                 {
+                    layer: 'active-exploitation',
+                    opacity: 0,
+                },
+                {
                     layer: 'active-exploration-line',
                     opacity: 0,
                 },
                 {
+                    layer: 'active-exploration',
+                    opacity: 0,
+                },
+                {
                     layer: 'research-application-line',
+                    opacity: 0,
+                },
+                {
+                    layer: 'research-application',
                     opacity: 0,
                 },
                 {
@@ -88,6 +100,22 @@ var config = {
                     layer: 'gfw-alerts',
                     opacity: 0.0,
                 },
+                {
+                    layer: 'rfo-tracks',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-tracks-2020',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-tracks-2021',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'ne-congo-forest',
+                    opacity: 1.0, 
+                },
             ],
             onChapterExit: [
                 // {
@@ -123,15 +151,15 @@ var config = {
                 //     layer: 'rfo-limits-polygon',
                 //     opacity: 0.6,
                 // },
-                {
-                    layer: 'landcover',
-                    opacity: 0.2, 
-                },
             ],
             onChapterExit: [
                 {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.4,
+                },
+                {
+                    layer: 'ne-congo-forest',
+                    opacity: 0.2, 
                 },
             ]
         },
@@ -200,10 +228,14 @@ var config = {
                 },                  
             ],
             onChapterExit: [
-                // {
-                //     layer: 'rfo-limits-natural',
-                //     opacity: 0.6,
-                // },  
+                {
+                    layer: 'rfo-limits-natural',
+                    opacity: 0.2,
+                },
+                {
+                    layer: 'rfo-limits-artificial',
+                    opacity: 0.2,
+                },   
             ]
         },
         {
@@ -223,16 +255,16 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {
-                    layer: 'rfo-limits-natural',
-                    opacity: 0.8,
-                },                
+                // {
+                //     layer: 'rfo-limits-natural',
+                //     opacity: 0.8,
+                // },                
             ],
             onChapterExit: [
-                {
-                    layer: 'rfo-limits-natural',
-                    opacity: 0.6,
-                },  
+                // {
+                //     layer: 'rfo-limits-natural',
+                //     opacity: 0.6,
+                // },  
             ]
         },
         {
@@ -241,7 +273,7 @@ var config = {
             hidden: false,
             title: '5. An erroneous map changes the balance',
             // image: './path/to/image/source.png',
-            description: 'Well-known for mineral deposits, Ituri Province boasts gold-bearing belts which have been the source of many gold rushes that attract speculators from near and far. Within the Reserve, The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary sunken inwards about 14 miles, and the northern boundary about 16, and the southern about 8 miles.',
+            description: 'Well-known for mineral deposits, Ituri Province boasts gold-bearing belts which have been the source of many gold rushes that attract speculators from near and far. Within the Reserve, The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary sunken inwards about 14 miles, and the northern boundary about 16, and the southern about 8 miles. <p><i><t>Mining concession data are hosted on the <a href="http://drclicences.cami.cd/EN/. "> DRC Mining Cadastre Map Portal </a> While the Mining Cadastre has shared its concession data with multiple sources in the past, the protected area that they use has not been made available. The representation of the Okapi Reserve boundary was therefore digitized. Note the blocky look, this is owing to the Cadastre conforming concessions to a 30-arc second grid.</i>',
             location: {
                 center: [28.531101, 1.531721],
                 zoom: 8.0,
@@ -293,14 +325,14 @@ var config = {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.2,
                 },
-                {
-                    layer: 'rfo-limits-artificial',
-                    opacity: 0.8,
-                }, 
-                {
-                    layer: 'rfo-limits-natural',
-                    opacity: 0.8,
-                },
+                // {
+                //     layer: 'rfo-limits-artificial',
+                //     opacity: 0.8,
+                // }, 
+                // {
+                //     layer: 'rfo-limits-natural',
+                //     opacity: 0.8,
+                // },
                 {
                     layer: 'waterway',
                     opacity: 0.2,
@@ -315,18 +347,43 @@ var config = {
                 },
                 {
                     layer: 'active-exploitation-line',
-                    opacity: 1,
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'active-exploitation',
+                    opacity: 0.8,
                 },
                 {
                     layer: 'active-exploration-line',
-                    opacity: 1,
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'active-exploration',
+                    opacity: 0.8,
                 },
                 {
                     layer: 'research-application-line',
-                    opacity: 1,
+                    opacity: 0.5,
                 },
-            ],
-            onChapterExit: []
+                {
+                    layer: 'research-application',
+                    opacity: 0.8,
+                },
+                ],
+            onChapterExit: [
+                {
+                    layer: 'active-exploitation',
+                    opacity: 0.2,
+                },
+                {
+                    layer: 'research-application',
+                    opacity: 0.2,
+                },
+                {
+                    layer: 'active-exploration',
+                    opacity: 0.2,
+                },
+            ]
         },
         {
             id: 'ch7',
@@ -334,7 +391,7 @@ var config = {
             hidden: false,
             title: '7. Expansion of semi-industrial causing permanent damages',
             image: '/assets/rfo_gfw_alerts_confidence.gif',
-            description: 'Copy these sections to add to your story.',
+            description: 'Small-scale artisanal mining represented a persistent challenge in managing the Reserve’s southwest bloc throughout the 2010s. On a few occasions, miners were cleared out from these mines located deep inside the forest. The satellite record showed dramatic expansion of the mines, first by clearing many kilometers of roads to access mines south of the Ituri River in 2020, then north of the Ituri River in 2021 and after.',
             // location: {
             //     center: [28.131101, 1.331721],
             //     zoom: 12.52,
@@ -352,11 +409,16 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'gfw-alerts',
-                    opacity: 0.8,
+                    layer: 'rfo-tracks',
+                    opacity: 1,
                 },               
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'gfw-alerts',
+                    opacity: 0.5,
+                },
+            ]
         },
                 {
             id: 'unesco',
