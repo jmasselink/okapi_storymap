@@ -29,10 +29,10 @@ var config = {
                 pitch: 20,
                 bearing: 0
             },
-            mosaic: 'Jun 2021',
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
+            // mosaic: 'Jun 2021',
+            // mapAnimation: 'flyTo',
+            // rotateAnimation: false,
+            // callback: '',
             onChapterEnter: [
                 {
                     layer: 'admin-1-boundary',
@@ -145,14 +145,14 @@ var config = {
                 //speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
-            mosaic: 'Jun 2021',
+            // mosaic: 'Jun 2021',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
                 {
                     layer: 'ne-congo-forest',
-                    opacity: 0.4, 
+                    opacity: 0.3, 
                 },
             ],
             onChapterExit: [
@@ -184,6 +184,10 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
+                    layer: 'poi-label',
+                    opacity: 1.0,
+                },
+                {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.6,
                 },
@@ -199,9 +203,8 @@ var config = {
                 },
                 {
                     layer: 'waterway',
-                    opacity: 0.1,
+                    opacity: 0.2,
                 },
-                
             ]
         },
         {
@@ -217,9 +220,9 @@ var config = {
                 pitch: 20,
                 bearing: 0
             },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
+            // mapAnimation: 'flyTo',
+            // rotateAnimation: false,
+            // callback: '',
             onChapterEnter: [
                 {
                     layer: 'rfo-limits-natural',
@@ -233,11 +236,15 @@ var config = {
             onChapterExit: [
                 {
                     layer: 'rfo-limits-natural',
-                    opacity: 0.2,
+                    opacity: 0.0,
                 },
                 {
                     layer: 'rfo-limits-artificial',
-                    opacity: 0.2,
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.6,
                 },   
             ]
         },
@@ -250,18 +257,22 @@ var config = {
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [28.531101, 1.531721],
-                zoom: 8.0,
-                pitch: 10,
+                zoom: 8.5,
+                pitch: 20,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'rfo-limits-natural',
-                //     opacity: 0.8,
-                // },                
+                {
+                    layer: 'settlement-minor-label',
+                    opacity: 0.8,
+                },
+                {
+                    layer: 'waterway',
+                    opacity: 0.4,
+                },               
             ],
             onChapterExit: [
                 // {
@@ -272,11 +283,11 @@ var config = {
         },
         {
             id: 'ch5',
-            alignment: 'fully',
+            alignment: 'left',
             hidden: false,
             title: '5. An erroneous map changes the balance',
             // image: './path/to/image/source.png',
-            description: 'Well-known for mineral deposits, Ituri Province boasts gold-bearing belts which have been the source of many gold rushes that attract speculators from near and far. Within the Reserve, The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary sunken inwards about 14 miles, and the northern boundary about 16, and the southern about 8 miles. <p><i><t>Mining concession data are hosted on the <a href="http://drclicences.cami.cd/EN/. "> DRC Mining Cadastre Map Portal </a> While the Mining Cadastre has shared its concession data with multiple sources in the past, the protected area that they use has not been made available. The representation of the Okapi Reserve boundary was therefore digitized. Note the blocky look, this is owing to the Cadastre conforming concessions to a 30-arc second grid.</i>',
+            description: 'Well-known for mineral deposits, Ituri Province boasts gold-bearing belts which have been the source of many gold rushes that attract speculators from near and far. Within the Reserve, The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary sunken inwards about 14 miles, and the northern boundary about 16, and the southern about 8 miles. <p><i><t>** Mining concession data are hosted on the <a href="http://drclicences.cami.cd/EN/">DRC Mining Cadastre Map Portal</a>. While the Mining Cadastre has shared its concession data with multiple sources in the past, the protected area boundaries that they use is not downloadable. The CAMI representation of the Okapi Reserve boundary was therefore digitized. Note the blocky look, this is owing to the Mining Cadastre conforming concessions to a 30-arc second grid.<p>The Okapi Reserve covers 9107 km2 according to CAMI, while <a href="https://www.protectedplanet.net/37043/">World Database on Protected Areas</a> (has it listed as 13,726.25 km2, a reduction of 33% of its area.</i>',
             location: {
                 center: [28.531101, 1.531721],
                 zoom: 8.0,
@@ -287,20 +298,16 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'rfo-limits-artificial',
-                //     opacity: 0.8,
-                // },
                 {
                     layer: 'rfo-cami',
                     opacity: 0.8,
                 },                
             ],
             onChapterExit: [
-                {
-                    layer: 'rfo-limits-artificial',
-                    opacity: 0.6,
-                },  
+                // {
+                //     layer: 'rfo-limits-artificial',
+                //     opacity: 0.6,
+                // },  
             ]
         },
         {
@@ -322,31 +329,23 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'rfo-cami',
-                    opacity: 0.8,
+                    opacity: 0.6,
                 },
                 {
                     layer: 'rfo-limits-polygon',
-                    opacity: 0.2,
+                    opacity: 0.4,
                 },
-                // {
-                //     layer: 'rfo-limits-artificial',
-                //     opacity: 0.8,
-                // }, 
-                // {
-                //     layer: 'rfo-limits-natural',
-                //     opacity: 0.8,
-                // },
                 {
                     layer: 'waterway',
-                    opacity: 0.2,
+                    opacity: 0.4,
                 }, 
                 {
                     layer: 'road-simple',
-                    opacity: 0.2,
+                    opacity: 0.4,
                 },
                 {
                     layer: 'settlement-minor-label',
-                    opacity: 0.0,
+                    opacity: 0.4,
                 },
                 {
                     layer: 'active-exploitation-line',
@@ -372,7 +371,7 @@ var config = {
                     layer: 'research-application',
                     opacity: 0.8,
                 },
-                ],
+            ],
             onChapterExit: [
                 {
                     layer: 'active-exploitation',
@@ -392,34 +391,92 @@ var config = {
             id: 'ch7',
             alignment: 'left',
             hidden: false,
-            title: '7. Expansion of semi-industrial causing permanent damages',
-            image: '/assets/rfo_gfw_alerts_confidence.gif',
+            title: '7. From artisanal to semi-industrial mines',
+            // image: '/assets/rfo_gfw_alerts_confidence.gif',
             description: 'Small-scale artisanal mining represented a persistent challenge in managing the Reserve’s southwest bloc throughout the 2010s. On a few occasions, miners were cleared out from these mines located deep inside the forest. The satellite record showed dramatic expansion of the mines, first by clearing many kilometers of roads to access mines south of the Ituri River in 2020, then north of the Ituri River in 2021 and after.',
-            // location: {
-            //     center: [28.131101, 1.331721],
-            //     zoom: 12.52,
-            //     pitch: 8.01,
-            //     bearing: 0.00
-            // },
             location: {
                 center: [28.00, 1.331721],
                 zoom: 10.52,
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Sep 2022',
+            mosaic: 'Sep 2020',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'rfo-tracks',
-                    opacity: 1,
+                    layer: 'active-exploitation-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'active-exploitation',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'active-exploration',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'research-application',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.1,
                 },               
             ],
             onChapterExit: [
+                // {
+                //     layer: 'gfw-alerts',
+                //     opacity: 0.5,
+                // },
                 {
-                    layer: 'gfw-alerts',
+                    layer: 'rfo-tracks-2020',
+                    opacity: 0.5,
+                },
+            ]
+        },
+        {
+            id: 'ch8',
+            alignment: 'left',
+            hidden: false,
+            title: '8. New road development in 2021 Expansion of semi-industrial causing permanent damages',
+            // image: '/assets/rfo_gfw_alerts_confidence.gif',
+            description: 'Small-scale artisanal mining represented a persistent challenge in managing the Reserve’s southwest bloc throughout the 2010s. On a few occasions, miners were cleared out from these mines located deep inside the forest. The satellite record showed dramatic expansion of the mines, first by clearing many kilometers of roads to access mines south of the Ituri River in 2020, then north of the Ituri River in 2021 and after.',
+            location: {
+                center: [28.131101, 1.331721],
+                zoom: 12.52,
+                pitch: 8.01,
+                bearing: 0.00
+            },
+            // location: {
+            //     center: [28.00, 1.331721],
+            //     zoom: 10.52,
+            //     pitch: 8.01,
+            //     bearing: 0.00
+            // },
+            mosaic: 'Oct 2021',
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                // {
+                //     layer: 'rfo-tracks',
+                //     opacity: 1,
+                // },               
+            ],
+            onChapterExit: [
+                {
+                    layer: 'rfo-tracks-2021',
                     opacity: 0.5,
                 },
             ]

@@ -328,7 +328,6 @@ if (config.showMarkers) {
 // instantiate the scrollama
 var scroller = scrollama();
 
-
 map.on("load", function() {
     if (config.use3dTerrain) {
         map.addSource('mapbox-dem', {
@@ -406,7 +405,7 @@ map.on("load", function() {
         map.addSource(name, {
             "type": "raster",
             "tiles": [
-                `https://developers.planet.com/docs/basemaps/tile-services/xyz/`, // added this...
+                //`https://developers.planet.com/docs/basemaps/tile-services/xyz/`, // added this...
                 `https://tiles0.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
                 `https://tiles1.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
                 `https://tiles2.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
