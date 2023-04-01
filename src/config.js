@@ -1,6 +1,7 @@
 var config = {
     style: 'mapbox://styles/jmasselink/cldzeoc0g005e01lc5830y7pr',
     accessToken: 'pk.eyJ1Ijoiam1hc3NlbGluayIsImEiOiJjbGU3eWllcmcwYTJnM29taG51dnV4NDhxIn0.fvnE_Pf3T6kKOt7TUeuubw',
+    NICFI_API_KEY: 'PLAK4a3933f7143c4215ba8d61bf91d397d4',
     showMarkers: true,
     markerColor: '#3FB1CE',
     projection: 'globe',//'equirectangular',
@@ -28,6 +29,7 @@ var config = {
                 pitch: 20,
                 bearing: 0
             },
+            mosaic: 'Jun 2021',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
@@ -114,7 +116,7 @@ var config = {
                 },
                 {
                     layer: 'ne-congo-forest',
-                    opacity: 1.0, 
+                    opacity: 0.2, 
                 },
             ],
             onChapterExit: [
@@ -143,14 +145,15 @@ var config = {
                 //speed: 2, // make the flying slow
                 //curve: 1, // change the speed at which it zooms out
             },
+            mosaic: 'Jun 2021',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'rfo-limits-polygon',
-                //     opacity: 0.6,
-                // },
+                {
+                    layer: 'ne-congo-forest',
+                    opacity: 0.4, 
+                },
             ],
             onChapterExit: [
                 {
@@ -404,6 +407,7 @@ var config = {
                 pitch: 8.01,
                 bearing: 0.00
             },
+            mosaic: 'Sep 2022',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',

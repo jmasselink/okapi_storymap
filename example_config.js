@@ -1,7 +1,7 @@
 var config = {
     style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    accessToken: 'ACCESS TOKEN HERE',
-    NICFI_API_KEY: 'NICFI API KEY HERE',
+    accessToken: 'pk.eyJ1Ijoiam1hc3NlbGluayIsImEiOiJabWhkUG5NIn0.6xSjdgz2QoNbWb-7F4BqDg',
+    NICFI_API_KEY: 'PLAK4a3933f7143c4215ba8d61bf91d397d4', //'8915295faf3e47cabb5d2836743c9341',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'dark',

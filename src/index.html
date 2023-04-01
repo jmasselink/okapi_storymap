@@ -352,6 +352,83 @@ map.on("load", function() {
         });
     };
 
+    // Add new layers below labels: https://docs.mapbox.com/mapbox-gl-js/example/geojson-layer-in-stack/
+    const layers = map.getStyle().layers;
+    let firstSymbolId;
+    for (const layer of layers) {
+        if (layer.id !== "background" && layer.id !== "satellite") {
+            firstSymbolId = layer.id;
+            break;
+        }
+    }
+
+    // YOUR TURN: Add or remove available time periods for NICFI imagery, from newer to older
+    const PERIODS = {
+        "Sep 2022": "2022-09",
+        "Aug 2022": "2022-08",
+        "Jul 2022": "2022-07",
+        "Jun 2022": "2022-06",
+        "May 2022": "2022-05",
+        "Apr 2022": "2022-04",
+        "Mar 2022": "2022-03",
+        "Feb 2022": "2022-02",
+        "Jan 2022": "2022-01",
+        "Dec 2021": "2021-12",
+        "Nov 2021": "2021-11",
+        "Oct 2021": "2021-10",
+        "Sep 2021": "2021-09",
+        "Aug 2021": "2021-08",
+        "Jul 2021": "2021-07",
+        "Jun 2021": "2021-06",
+        "May 2021": "2021-05",
+        "Apr 2021": "2021-04",
+        "Mar 2021": "2021-03",
+        "Feb 2021": "2021-02",
+        "Jan 2021": "2021-01",
+        "Dec 2020": "2020-12",
+        "Nov 2020": "2020-11",
+        "Oct 2020": "2020-10",
+        "Sep 2020": "2020-09",
+        "Jun 2020 - Sep 2020": "2020-06_2020-08",
+        "Dec 2019 - Jun 2020": "2019-12_2020-05",
+        "Jun 2019 - Dec 2019": "2019-06_2019-11",
+        "Dec 2018 - Jun 2019": "2018-12_2019-05",
+        "Jun 2018 - Dec 2018": "2018-06_2018-11",
+        "Dec 2017 - Jun 2018": "2017-12_2018-05",
+        "Jun 2017 - Dec 2017": "2017-06_2017-11",
+        "Dec 2016 - Jun 2017": "2016-12_2017-05",
+        "Jun 2016 - Dec 2016": "2016-06_2016-11",
+        "Dec 2015 - Jun 2016": "2015-12_2016-05"
+    };
+
+    Object.entries(PERIODS).forEach(entry => {
+        const [name, mosaic] = entry;
+        map.addSource(name, {
+            "type": "raster",
+            "tiles": [
+                `https://developers.planet.com/docs/basemaps/tile-services/xyz/`, // added this...
+                `https://tiles0.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
+                `https://tiles1.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
+                `https://tiles2.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`,
+                `https://tiles3.planet.com/basemaps/v1/planet-tiles/planet_medres_visual_${mosaic}_mosaic/gmap/{z}/{x}/{y}.png?api_key=${config.NICFI_API_KEY}`
+            ],
+            "tileSize": 256,
+            "attribution": '<a target="_top" rel="noopener" href="https://www.planet.com/nicfi/">Imagery ©2021 Planet Labs Inc</a>. <a target="_top" rel="noopener" href="https://assets.planet.com/docs/Planet_ParticipantLicenseAgreement_NICFI.pdf">All use subject to the Participant License Agreement</a>'
+        });
+        map.addLayer(
+            {
+                "id": name,
+                "type": "raster",
+                "source": name,
+                "maxzoom": 22,
+                "layout": {
+                    "visibility": "none"
+                }
+            },
+            firstSymbolId
+        );
+    });
+
     // As the map moves, grab and update bounds in inset map.
     if (config.inset) {
     map.on('move', getInsetBounds);
@@ -363,10 +440,12 @@ map.on("load", function() {
         offset: 0.5,
         progress: true
     })
-    .onStepEnter(async response => {
-        var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
-        var chapter = config.chapters[current_chapter];
-        
+    //  replaced async response with regular old response
+    // .onStepEnter(async response => {
+    //     var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
+    //     var chapter = config.chapters[current_chapter];
+    .onStepEnter(response => {
+        var chapter = config.chapters.find(chap => chap.id === response.element.id);        
         response.element.classList.add('active');
         map[chapter.mapAnimation || 'flyTo'](chapter.location);
 
@@ -400,18 +479,24 @@ map.on("load", function() {
                 });
             });
         }
-        if (config.auto) {
-             var next_chapter = (current_chapter + 1) % config.chapters.length;
-             map.once('moveend', () => {
-                 document.querySelectorAll('[data-scrollama-index="' + next_chapter.toString() + '"]')[0].scrollIntoView();
-             });
+        if (chapter.mosaic) {
+            map.setLayoutProperty(chapter.mosaic, 'visibility', 'visible');
         }
+        // if (config.auto) {
+        //      var next_chapter = (current_chapter + 1) % config.chapters.length;
+        //      map.once('moveend', () => {
+        //          document.querySelectorAll('[data-scrollama-index="' + next_chapter.toString() + '"]')[0].scrollIntoView();
+        //      });
+        // }
     })
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
+        }
+        if (chapter.mosaic) {
+            map.setLayoutProperty(chapter.mosaic, 'visibility', 'none');
         }
     });
 
