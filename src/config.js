@@ -515,11 +515,11 @@ var config = {
         },
         {
             id: 'ch11',
-            alignment: 'left',
+            alignment: 'center',
             hidden: false,
             title: '11. Mine expansion continues unabated causing permanent damages',
             // image: '/assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In 2022 and beyond, the mining complex appears to expand unabated. These mining sites are causing permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly be needed to plan for extensive restoration to ensure the natural environment continues to support wildlife, indigenous peoples of the Okapi Reserve.',
+            description: 'In 2022 and beyond, the mining complex appears to expand unabated. These mining sites are causing permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly be needed to plan for extensive restoration to ensure the natural environment continues to support wildlife, indigenous peoples of the Okapi Reserve.' + '<br /><br /><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
             location: {
                 center: [28.10756, 1.32350],
                 zoom: 10.8,
