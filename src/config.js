@@ -135,7 +135,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'The Ituri Forest and Indigenous Communities',
-            image: './assets/JoelMasselink_Mbuti_Girls2.JPG',
+            image: '../assets/JoelMasselink_Mbuti_Girls2.JPG',
             description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for thousands of years. They practice traditional ceremonies, subsistence hunting and gathering, and temporary settlements deep within the forest or on the outskirts of villages. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they avoid hunting the okapi out of reverence for this animal.",
             location: {
                 center: [28.131101, 1.531721],
@@ -171,7 +171,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Creation of the Okapi Wildlife Reserve',
-            image: './assets/JoelMasselink_Okapi.JPG',
+            image: '../assets/JoelMasselink_Okapi.JPG',
             description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq km), an area larger than Death Valley National Park, or slightly smaller than the state of Connecticut or country of Montenegro. The reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
             location: {
                 center: [28.131101, 1.531721],
@@ -212,7 +212,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Challenges in the Reserve',
-            image: './assets/JoelMasselink_ForestElephant.JPG',
+            image: '../assets/JoelMasselink_ForestElephant.JPG',
             description: "The Reserve contains many small villages, and reserve management has the delicate task of engaging communities in conservation while limiting non-compatible land and resource use. The reserve has a history marred by spates of militarized elephant poaching, mining, and episodes of contact between park guards and militia groups, and the communities within the reserve remain very poor. Land and resource use within the reserve limit human migration and are meant to support only smallholder farming and sustainable, discriminate hunting. Despite these policies and decent management, the conservation outlook for the reserve remains critical as it has been retained on the List of World Heritage in Danger by UNESCO since 1997.",
             location: {
                 center: [28.131101, 1.531721],
@@ -500,7 +500,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'More new roads and massive expansion in 2021',
-            // image: './assets/rfo_gfw_alerts_confidence.gif',
+            image: '../assets/rfo_gfw_alerts_confidence.gif',
             description: "<b><i>Planet mosaic imagery from Oct 2021</b></i><p>In 2021, a similar pattern was mirrored on the north side of the Ituri River, where an estimated 17 kilometers or new roads were cleared to facilitate access, development, and expansion of mining sites. <p>Note the following statement from UNESCO in 2021, regarding the <a href='https://whc.unesco.org/en/decisions/7705'>decision</a> to retain Okapi Reserve on the List of World Heritage in Peril: <p><i>`While noting the efforts undertaken to close artisanal mines, expresses serious concern that illegal mining in the property appears to be intensifying in reported complicity with certain local authorities, with small-scale artisanal mining operations evolving into large-scale semi-industrial operations, and the development of a permanent settlement at the Muchacha mining site.`</i>",
             location: {
                 center: [28.14, 1.31603],
@@ -534,7 +534,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
-            image: './assets/rfo_gfw_alerts_confidence.gif',
+            // image: '/assets/rfo_gfw_alerts_confidence.gif',
             description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i><p>In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a stop to all semi-industrial mining, in able to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.",
             location: {
                 center: [28.10756, 1.32350],
