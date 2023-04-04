@@ -500,7 +500,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'More new roads and massive expansion in 2021',
-            image: '../assets/rfo_gfw_alerts_confidence.gif',
+            // image: '../assets/rfo_gfw_alerts_confidence.gif',
             description: "<b><i>Planet mosaic imagery from Oct 2021</b></i><p>In 2021, a similar pattern was mirrored on the north side of the Ituri River, where an estimated 17 kilometers or new roads were cleared to facilitate access, development, and expansion of mining sites. <p>Note the following statement from UNESCO in 2021, regarding the <a href='https://whc.unesco.org/en/decisions/7705'>decision</a> to retain Okapi Reserve on the List of World Heritage in Peril: <p><i>`While noting the efforts undertaken to close artisanal mines, expresses serious concern that illegal mining in the property appears to be intensifying in reported complicity with certain local authorities, with small-scale artisanal mining operations evolving into large-scale semi-industrial operations, and the development of a permanent settlement at the Muchacha mining site.`</i>",
             location: {
                 center: [28.14, 1.31603],
@@ -534,7 +534,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
-            // image: '/assets/rfo_gfw_alerts_confidence.gif',
+            image: '../assets/rfo_gfw_alerts_confidence.gif',
             description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i><p>In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a stop to all semi-industrial mining, in able to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.",
             location: {
                 center: [28.10756, 1.32350],
