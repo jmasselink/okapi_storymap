@@ -135,7 +135,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'The Ituri Forest and Indigenous Communities',
-            image: './assets/JoelMasselink_Mbuti_Girls2.JPG',
+            image: '../assets/JoelMasselink_Mbuti_Girls2.JPG',
             description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for thousands of years. They practice traditional ceremonies, subsistence hunting and gathering, and temporary settlements deep within the forest or on the outskirts of villages. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they avoid hunting the okapi out of reverence for this animal.",
             location: {
                 center: [28.131101, 1.531721],
@@ -171,7 +171,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Creation of the Okapi Wildlife Reserve',
-            image: './assets/JoelMasselink_Okapi.JPG',
+            image: '../assets/JoelMasselink_Okapi.JPG',
             description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq km), an area larger than Death Valley National Park, or slightly smaller than the state of Connecticut or country of Montenegro. The reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
             location: {
                 center: [28.131101, 1.531721],
@@ -212,7 +212,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'Challenges in the Reserve',
-            image: './assets/JoelMasselink_ForestElephant.JPG',
+            image: '../assets/JoelMasselink_ForestElephant.JPG',
             description: "The Reserve contains many small villages, and reserve management has the delicate task of engaging communities in conservation while limiting non-compatible land and resource use. The reserve has a history marred by spates of militarized elephant poaching, mining, and episodes of contact between park guards and militia groups, and the communities within the reserve remain very poor. Land and resource use within the reserve limit human migration and are meant to support only smallholder farming and sustainable, discriminate hunting. Despite these policies and decent management, the conservation outlook for the reserve remains critical as it has been retained on the List of World Heritage in Danger by UNESCO since 1997.",
             location: {
                 center: [28.131101, 1.531721],
@@ -481,7 +481,7 @@ var config = {
                 },
                 {
                     layer: 'rfo-tracks-2020',
-                    opacity: 0.5,
+                    opacity: 0.3,
                 },
                 {
                     layer: 'rfo-mines',
@@ -519,7 +519,7 @@ var config = {
                 },  
                 {
                     layer: 'rfo-tracks-2021',
-                    opacity: 0.5,
+                    opacity: 0.3,
                 },             
             ],
             onChapterExit: [
@@ -535,7 +535,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i><p>In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a stop to all semi-industrial mining, in able to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.",
+            description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
             location: {
                 center: [28.10756, 1.32350],
                 zoom: 10.8,
@@ -549,7 +549,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'rfo-tracks',
-                    opacity: 0.8,
+                    opacity: 0.6,
                 },
                 {
                     layer: 'gfw-alerts',
@@ -559,6 +559,34 @@ var config = {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.2,
                 },               
+            ],
+            onChapterExit: [
+            ]
+        },
+        {
+            id: 'ch12',
+            alignment: 'center',
+            hidden: false,
+            title: 'Mine expansion continues unabated causing permanent damages',
+            // image: '../assets/rfo_gfw_alerts_confidence.gif',
+            description: 'In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a stop to all semi-industrial mining, in able to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.' + '<br /><br /><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
+            // location: {
+            //     center: [28.05570, 1.34050],
+            //     zoom: 10.0,
+            //     pitch: 8.01,
+            //     bearing: 0.00
+            // },
+            location: {
+                center: [28.06, 1.27003],
+                zoom: 11,
+                pitch: 8.01,
+                bearing: 0.00
+            },
+            mosaic: 'Oct 2022',
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [            
             ],
             onChapterExit: [
             ]
