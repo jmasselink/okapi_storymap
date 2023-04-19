@@ -193,6 +193,24 @@
 <body>
 
 <div id="map"></div>
+
+<!-- added chapter legends -->
+    <div id='introlegend' class='legend blackshadow left-legend'>
+        <h4>Number of disaster IDPs in 2021</h4>
+        <ul class='legend-ul'>
+            <li><div><span style='background-color: #c8d4d2; border: solid 1px #616162;'></span>< 50.000 </div></li>
+            <li><div><span style='background-color: #9db5b1; border: solid 1px #616162;'></span>> 50.000 </div></li>
+            <li><div><span style='background-color: #749c95; border: solid 1px #616162;'></span>> 200.000 </div></li>
+        <li><div><span style='background-color: #4b867c; border: solid 1px #616162;'></span>> 500.000 </div></li>
+        <li><div><span style='background-color: #007367; border: solid 1px #616162;'></span>> 1.000.000 </div></li>
+        </ul>
+        <br />
+        <!-- <h5><strong>Data</strong>: <a href='https://www.internal-displacement.org/database/displacement-data' target='_blank'>IDMC</a></h5> -->
+    </div>
+
+
+
+
 <div id="mapInset"></div>
 <div id="story"></div>
 
@@ -475,13 +493,23 @@ map.on("load", function() {
         offset: 0.5,
         progress: true
     })
-    //  replaced async response with regular old response
-    // .onStepEnter(async response => {
-    //     var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
-    //     var chapter = config.chapters[current_chapter];
-    .onStepEnter(response => {
-        var chapter = config.chapters.find(chap => chap.id === response.element.id);        
+    //  replaced regular old response with async response
+    .onStepEnter(async response => {
+        // var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
+        // var chapter = config.chapters[current_chapter];
+        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        var chapterid = chapter.id
+
+        if (chapterid =="intro")
+            $("#introlegend").show("slow");
+        } else
+            $("#introlegend").hide("fast");
+
         response.element.classList.add('active');
+
+    // .onStepEnter(response => {
+    //     var chapter = config.chapters.find(chap => chap.id === response.element.id);        
+    //     response.element.classList.add('active');
         map[chapter.mapAnimation || 'flyTo'](chapter.location);
 
         // Incase you do not want to have a dynamic inset map,
