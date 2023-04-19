@@ -340,8 +340,8 @@ var map = new mapboxgl.Map({
 });
 
 // Create a inset map if enabled in config.js
-// if (config.inset) {
-if (config.inset == true && config.legend == false) {
+if (config.inset) {
+// if (config.inset == true && config.legend == false) {
  var insetMap = new mapboxgl.Map({
     container: 'mapInset', // container id
     style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
