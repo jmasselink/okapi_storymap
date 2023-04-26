@@ -172,7 +172,7 @@ var config = {
             hidden: false,
             title: 'Creation of the Okapi Wildlife Reserve',
             image: '../assets/JoelMasselink_Okapi.JPG',
-            description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq km), an area larger than Death Valley National Park, or slightly smaller than the state of Connecticut or the country of Montenegro. The reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
+            description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq mi), an area larger than Death Valley National Park, or slightly smaller than the state of Connecticut or the country of Montenegro. The reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 7.5,
@@ -316,7 +316,7 @@ var config = {
             hidden: false,
             title: 'The incongruence of mining concessions in a World Heritage site',
             // image: './path/to/image/source.png',
-            description: "DRC’s Mining Cadastre (CAMI) has used its own version of the Reserve’s boundaries for at least 10 years, awarding and renewing research, exploration, and extraction concessions which technically fall inside of the Reserve’s decreed boundaries. These concessions are prevalent in allegedly productive areas along the Ituri River in the southern part of the reserve. Small-scale artisanal mining represented a persistent challenge in managing the Reserve’s southwestern Enjewe bloc throughout the 2010s. On a few occasions, rangers clearned miners out from these mines located deep inside the forest, as were semi-industrial actors who brought in dredges to mine in the river.",
+            description: "DRC’s Mining Cadastre (CAMI) has used its own version of the Reserve’s boundaries for at least 10 years, awarding and renewing research, exploration, and extraction concessions which technically fall inside of the Reserve’s decreed boundaries. These concessions are prevalent in allegedly productive areas along the Ituri River in the southern part of the reserve.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 8.5,
@@ -535,7 +535,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
+            description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points on the main map are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
             location: {
                 center: [28.10756, 1.32350],
                 zoom: 10.8,
@@ -569,7 +569,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             // image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a stop to all semi-industrial mining, in able to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.' + '<br /><br /><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
+            description: 'In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times (6 month intervals) in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
             // location: {
             //     center: [28.05570, 1.34050],
             //     zoom: 10.0,
@@ -582,7 +582,7 @@ var config = {
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Oct 2022',
+            mosaic: 'Mar 2023',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
@@ -595,8 +595,8 @@ var config = {
             id: 'unesco',
             alignment: 'left',
             hidden: true,
-            title: '0. World Heritage in Danger',
-            image: './path/to/image/source.png',
+            title: 'World Heritage in Danger',
+            // image: './path/to/image/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                     center: [24, -1],
@@ -624,14 +624,14 @@ var config = {
                 },
             ],
             onChapterExit: [
-                {
-                    layer: 'rfo-limits-polygon',
-                    opacity: 0.4,
-                },
-                {
-                    layer: 'unesco-sites',
-                    opacity: 0.1,
-                },
+                // {
+                //     layer: 'rfo-limits-polygon',
+                //     opacity: 0.4,
+                // },
+                // {
+                //     layer: 'unesco-sites',
+                //     opacity: 0.1,
+                // },
             ]
         },
     ]
