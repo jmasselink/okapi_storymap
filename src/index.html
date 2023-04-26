@@ -208,10 +208,10 @@
         <!-- <h5><strong>Data</strong>: <a href='https://www.internal-displacement.org/database/displacement-data' target='_blank'>IDMC</a></h5> -->
     </div>
 
-
-
-
 <div id="mapInset"></div>
+<!-- <div id="loader">
+    <div id="loaderSpin"></div>
+</div> -->
 <div id="story"></div>
 
 <script src="./config.js"></script>
@@ -499,9 +499,9 @@ map.on("load", function() {
         // var current_chapter = config.chapters.findIndex(chap => chap.id === response.element.id);
         // var chapter = config.chapters[current_chapter];
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
-        var chapterid = chapter.id
+        var chapterid = chapter.id;
 
-        if (chapterid =="intro")
+        if (chapterid =="intro") {
             $("#introlegend").show("slow");
         } else
             $("#introlegend").hide("fast");
