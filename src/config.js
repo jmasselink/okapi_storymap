@@ -122,6 +122,14 @@ var config = {
                     layer: 'ne-congo-forest',
                     opacity: 0.3, 
                 },
+                {
+                    layer: 'label-drc',
+                    opacity: 0.0, 
+                },
+                {
+                    layer: 'label-ituri',
+                    opacity: 0.0, 
+                },
             ],
             onChapterExit: [
                 // {
@@ -157,6 +165,14 @@ var config = {
                 {
                     layer: 'ne-congo-forest',
                     opacity: 0.4, 
+                },
+                {
+                    layer: 'label-drc',
+                    opacity: 1, 
+                },
+                {
+                    layer: 'label-ituri',
+                    opacity: 1, 
                 },
             ],
             onChapterExit: [
@@ -435,6 +451,14 @@ var config = {
                 },               
             ],
             onChapterExit: [
+                {
+                    layer: 'label-drc',
+                    opacity: 0.0, 
+                },
+                {
+                    layer: 'label-ituri',
+                    opacity: 0.0, 
+                },
             ]
         },
         {
@@ -535,7 +559,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: "<b><i>Planet mosaic imagery from Oct 2022<p>Points on the main map are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
+            description: "<b><i>Planet mosaic imagery from April 2023<p>Points on the main map are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
             location: {
                 center: [28.10756, 1.32350],
                 zoom: 10.8,
@@ -558,7 +582,19 @@ var config = {
                 {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.2,
-                },               
+                },  
+                {
+                    layer: 'active-exploitation-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 0.5,
+                },             
             ],
             onChapterExit: [
             ]
@@ -569,7 +605,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             // image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In 2022 and beyond, the mining complex continued to expand, ensuring permanent damages to the forest, as well as the Ituri River for citizens downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times (6 month intervals) in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
+            description: 'In 2023, the mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times (6 month intervals) in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
             // location: {
             //     center: [28.05570, 1.34050],
             //     zoom: 10.0,
@@ -582,7 +618,7 @@ var config = {
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Mar 2023',
+            mosaic: 'Apr 2023',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
