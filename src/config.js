@@ -13,7 +13,7 @@ var config = {
     auto: false,
     title: 'How a mine grows in the forest...',
     // subtitle: '...and no one pays attention',
-    // byline: 'By a Digital Storyteller',
+    byline: 'by Joel Masselink',
     footer: 'Sources: Planet Imagery (NICFI), Global Forest Watch, World Database on Protected Areas, OpenStreetMap contributors, DRC Mining Cadastre<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
@@ -92,6 +92,10 @@ var config = {
                 },
                 {
                     layer: 'unesco-sites',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'unesco-sites-label',
                     opacity: 0.0,
                 },
                 {
@@ -605,7 +609,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             // image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In 2023, the mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times (6 month intervals) in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
+            description: 'In 2023, the mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
             // location: {
             //     center: [28.05570, 1.34050],
             //     zoom: 10.0,
@@ -618,13 +622,37 @@ var config = {
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Apr 2023',
+            mosaic: 'Jun 2023',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [            
             ],
             onChapterExit: [
+                {
+                    layer: 'rfo-tracks',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'gfw-alerts',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.0,
+                },  
+                {
+                    layer: 'active-exploitation-line',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 0.0,
+                },  
             ]
         },
         {
@@ -655,8 +683,16 @@ var config = {
                     opacity: 0.8,
                 },
                 {
+                    layer: 'unesco-sites-label',
+                    opacity: 1.0,
+                },
+                {
                     layer: 'landcover',
                     opacity: 0.2, 
+                },
+                {
+                    layer: 'rfo-cami',
+                    opacity: 0,
                 },
             ],
             onChapterExit: [
