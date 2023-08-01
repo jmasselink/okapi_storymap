@@ -5,8 +5,8 @@
     <title>Okapi Storymap</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -58,9 +58,9 @@
                 display: none;
             }
         }
-        /* #header {
+        #header {
             background-color: #444;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             padding: 1rem;
             position: relative;
             z-index: 5;
@@ -69,17 +69,30 @@
             justify-content: space-between;
             opacity: 0.9;
             width: 100%;
-        } */
-        #header {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+        }
+        
+        #header .header__text {
+            color: #d2f7b0;
+            margin: 0;
+            padding: 0.5vh 0.5vw;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        }
+
+        /* #header {
             margin: 0; 
             margin: auto;
             width: 100%;
             position: relative;
             z-index: 5;
-        }
+            /* padding: 1rem; */
+
         #header h1, #header h2, #header p {
             margin: 2% auto 10%;
-            padding: 2vh 2vw;
+            padding: 0.5vh 0.5vw;
             text-align: center;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: 700;
@@ -164,6 +177,7 @@
             color: #d2f7b0;
             margin-bottom: 0;
             line-height: 1.2em;
+            text-align: center;
         }
 
         /* Fix issue on mobile browser where scroll breaks  */
@@ -240,22 +254,27 @@ features.setAttribute('id', 'features');
 
 var header = document.createElement('div');
 
+var textContainer = document.createElement("div");
+	textContainer.classList.add("header__text");
+	header.appendChild(textContainer);
+
+
 if (config.title) {
     var titleText = document.createElement('h1');
     titleText.innerText = config.title;
-    header.appendChild(titleText);
+    textContainer.appendChild(titleText);
 }
 
 if (config.subtitle) {
-    var subtitleText = document.createElement('h2');
+    var subtitleText = document.createElement('h3'); //changed from h2
     subtitleText.innerText = config.subtitle;
-    header.appendChild(subtitleText);
+    textContainer.appendChild(subtitleText);
 }
 
 if (config.byline) {
-    var bylineText = document.createElement('p');
+    var bylineText = document.createElement('h4'); //h4
     bylineText.innerText = config.byline;
-    header.appendChild(bylineText);
+    textContainer.appendChild(bylineText);
 }
 
 if (header.innerText.length > 0) {
