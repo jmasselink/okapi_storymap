@@ -22,7 +22,7 @@ var config = {
             hidden: false,
             title: 'DRC: a megadiverse nation of abundant contrasts',
             // image: './path/to/image/source.png',
-            description: "The Democratic Republic of the Congo is blessed with biodiversity, abundant natural resources, and diverse ecosystems. Home to an estimated 100  million people, the DRC has a young, rapidly growing population, which includes hundreds of ethnic groups. Despite this, DRC ranks near the bottom (179/191) on the <a href='https://hdr.undp.org/data-center/specific-country-data#/countries/COD'>Human Development Index</a> and most of DRC’s people live in extreme poverty.",
+            description: "The Democratic Republic of the Congo is blessed with biodiversity, abundant natural resources, and diverse ecosystems. Home to roughly 100 million people, the DRC has a young, rapidly growing population, which represents hundreds of ethnic groups. Despite these characteristics, DRC ranks near the bottom (179/191) on the <a href='https://hdr.undp.org/data-center/specific-country-data#/countries/COD'>Human Development Index</a> and most of DRC’s population lives in extreme poverty.",
             location: {
                 center: [21, -3],
                 zoom: 4,
@@ -107,7 +107,7 @@ var config = {
                     opacity: 0.0,
                 },
                 {
-                    layer: 'rfo-tracks',
+                    layer: 'rfo-sw-tracks',
                     opacity: 0.0,
                 },
                 {
@@ -116,6 +116,10 @@ var config = {
                 },
                 {
                     layer: 'rfo-tracks-2021',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-tracks-2023',
                     opacity: 0.0,
                 },
                 {
@@ -148,7 +152,7 @@ var config = {
             hidden: false,
             title: 'The Ituri Forest and Indigenous Communities',
             image: '../assets/JoelMasselink_Mbuti_Girls2.JPG',
-            description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for thousands of years. They practice traditional ceremonies and subsistence hunting and gathering, and they live in temporary settlements deep within the forest or on the outskirts of villages. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they avoid hunting the okapi out of reverence for this animal.",
+            description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for tens of thousands of years. They practice cultural ceremonies and rites, as subsist primarily through hunting and gathering. The Mbuti and Efe live in temporary settlements alternating between the outskirts of villages and deep within the forest. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they avoid hunting the okapi out of reverence for this animal.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 7,
@@ -192,7 +196,7 @@ var config = {
             hidden: false,
             title: 'Creation of the Okapi Wildlife Reserve',
             image: '../assets/JoelMasselink_Okapi.JPG',
-            description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq mi), an area larger than Death Valley National Park, or slightly smaller than the state of Connecticut or the country of Montenegro. The reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
+            description: "The Okapi Wildlife Reserve was established in 1992 to protect the unique way of life of indigenous peoples, wildlife, and the Ituri forest ecosystem. A mixed-use protected area, the Okapi Reserve protects 13,726 sq km (5125 sq mi), an area slightly smaller than the state of Connecticut or the country of Montenegro. This important reserve protects the rights of access to arable land for indigenous Bantu horticulturalist communities as well. <p>In 1996, Okapi Wildlife Reserve was named a UNESCO World Heritage Site, by virtue of it containing the most important and significant natural habitats for in-situ biodiversity conservation of threatened species. The reserve harbors globally important populations of African forest elephant, okapi, and eastern chimpanzees, as well as 13 other species of diurnal primate and four nocturnal species, ranking it as the top protected area in sub-Saharan Africa in terms of primate diversity.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 7.5,
@@ -233,7 +237,7 @@ var config = {
             hidden: false,
             title: 'Challenges in the Reserve',
             image: '../assets/JoelMasselink_ForestElephant.JPG',
-            description: "The Reserve contains many small villages, and reserve management has the delicate task of engaging communities in conservation while limiting non-compatible land and resource use. The reserve's history has been marred by spates of militarized elephant poaching, mining, and episodes of contact between park guards and militia groups, and the communities within the reserve remain very poor. Land and resource use within the reserve limit human migration and are meant to support only smallholder farming and sustainable, discriminate hunting. Despite these policies and strong management, the conservation outlook for the reserve remains critical as it has been retained on the List of World Heritage in Danger by UNESCO since 1997.",
+            description: "The Reserve contains many small villages, and reserve management has the delicate task of engaging communities in conservation while limiting non-compatible land and resource use. The reserve's history has been marred by spates of militarized elephant poaching, mining, and episodes of armed contact between park guards and militia groups, and the communities within the reserve remain very poor. Land and resource use within the reserve limit human migration and are meant to support only smallholder farming and sustainable, discriminate hunting. Despite these policies and strong management, the conservation outlook for the reserve remains critical as it has been retained on the List of World Heritage in Danger by UNESCO since 1997.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 8.5,
@@ -266,7 +270,7 @@ var config = {
             hidden: false,
             title: 'Boundaries both natural and artificial',
             // image: './path/to/image/source.png',
-            description: "While the Ministerial Decree creating the Reserve describes its boundaries in detail, portions of the boundaries follow artificial lines, such as the western boundary following 28 degrees East longitude, an imaginary line through the forest. Most boundaries follow natural features, such as the Nepoko River in the north, and the Mambasa-Andudu road in the east.",
+            description: "While the Ministerial Decree creating the Reserve describes its boundaries in detail, portions of the boundaries follow artificial lines, such as the western boundary following 28 degrees East longitude, an imaginary line through the forest. Most boundaries follow natural features, such as the Nepoko River in the north, or visible, man-made boundaries such as the Mambasa-Andudu road in the east.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 8.5,
@@ -307,7 +311,7 @@ var config = {
             hidden: false,
             title: 'An erroneous map changes the balance',
             // image: './path/to/image/source.png',
-            description: "Ituri Province, where Okapi Reserve is located, is well-known for its mineral deposits, including gold-bearing belts that have attracted speculators from near and far. Small-scale artisanal mining has represented a persistent challenge in managing the reserve's southwest bloc throughout the 2010s. On a few occasions, park guards cleared thousands of miners out from these mines located deep inside the forest. The DRC’s Mining Cadastre uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary moved eastwards by over 22 kilometers (14 miles), and the northern boundary moved southwards by over 25 kilometers (16 miles), and the southern boundary moved northwards by over 12 kilometers (8 miles).<p><i><t> Mining concession data are hosted on the <a href='http://drclicences.cami.cd/EN/'>DRC Mining Cadastre Map Portal</a>. While the Mining Cadastre has shared its concession data with multiple sources in the past, the protected area boundaries data that they use are not downloadable. The CAMI representation of the Okapi Reserve boundary was therefore digitized and looks blocky, because the Mining Cadastre conforms concessions to a 30-arc second grid.<p>The Okapi Reserve has a total area of 13,726.25 sq km according to the <a href='https://www.protectedplanet.net/37043/'> World Database on Protected Areas</a>, while CAMI's representation of the boundaries covers only 9107 sq km, a reduction of 33% of its area.</i>",
+            description: "Ituri Province, where Okapi Reserve is located, is well-known for its mineral deposits, including gold-bearing belts that have attracted speculators from near and far. Small-scale artisanal mining has represented a persistent challenge in managing the reserve's southwest bloc throughout the 2010s. On a few occasions, park guards cleared thousands of miners out from these mines located deep inside the forest. Since at least 2011, the DRC’s Mining Cadastre, the Ministry of Mine's service responsible with allocating mineral prospection licenses, has been using a  uses a version of the Reserve’s boundaries which are roughly 2/3 of the actual size, with the western boundary moved eastwards by over 22 kilometers (14 miles), and the northern boundary moved southwards by over 25 kilometers (16 miles), and the southern boundary moved northwards by over 12 kilometers (8 miles).<p><i><t> Mining concession data are hosted on the <a href='http://drclicences.cami.cd/EN/'>DRC Mining Cadastre Map Portal</a>. While the Mining Cadastre has shared its concession data with multiple sources in the past, the protected area boundaries data that they use are not downloadable. The CAMI representation of the Okapi Reserve boundary was therefore digitized and looks blocky, because the Mining Cadastre conforms concessions to a 30-arc second grid.<p>The Okapi Reserve has a total area of 13,726.25 sq km according to the <a href='https://www.protectedplanet.net/37043/'> World Database on Protected Areas</a>, while CAMI's representation of the boundaries covers only 9107 sq km, a reduction of 33% of its area.</i>",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 8.5,
@@ -336,7 +340,7 @@ var config = {
             hidden: false,
             title: 'The incongruence of mining concessions in a World Heritage site',
             // image: './path/to/image/source.png',
-            description: "DRC’s Mining Cadastre (CAMI) has used its own version of the Reserve’s boundaries for at least 10 years, awarding and renewing research, exploration, and extraction concessions which technically fall inside of the Reserve’s decreed boundaries. These concessions are prevalent in allegedly productive areas along the Ituri River in the southern part of the reserve.",
+            description: "DRC’s Mining Cadastre (CAMI) has used its own version of the Reserve’s boundaries for at least 10 years, awarding and renewing research, exploration, and extraction concessions which technically fall inside of the Reserve’s decreed boundaries. These concessions are prevalent in allegedly productive areas along the Ituri River in the southern part of the reserve, and along the Reserve's western boundary, which is an artificial line tracing the 28 deg E parallel from the confluence of the Lenda and Ituri Rivers in the south to the Agamba River in the north.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 8.5,
@@ -551,10 +555,14 @@ var config = {
                 },             
             ],
             onChapterExit: [
-                // {
-                //     layer: 'rfo-tracks',
-                //     opacity: 1,
-                // },
+                {
+                    layer: 'rfo-tracks-2021',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-sw-tracks',
+                    opacity: 0.8,
+                },
             ]
         },
         {
@@ -570,15 +578,11 @@ var config = {
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Oct 2022',
+            mosaic: 'Apr 2023',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {
-                    layer: 'rfo-tracks',
-                    opacity: 0.6,
-                },
                 {
                     layer: 'gfw-alerts',
                     opacity: 0.5,
@@ -601,6 +605,26 @@ var config = {
                 },             
             ],
             onChapterExit: [
+                {
+                    layer: 'gfw-alerts',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.0,
+                },  
+                {
+                    layer: 'active-exploitation-line',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 0.0,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 0.0,
+                },    
             ]
         },
         {
@@ -617,22 +641,98 @@ var config = {
             //     bearing: 0.00
             // },
             location: {
-                center: [28.06, 1.27003],
+                center: [28.06, 1.27003],//center: [28.00, 1.55003],
                 zoom: 11,
                 pitch: 8.01,
                 bearing: 0.00
             },
-            mosaic: 'Jun 2023',
+            mosaic: 'Oct 2023',
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [            
             ],
             onChapterExit: [
+                // {
+                //     layer: 'rfo-tracks',
+                //     opacity: 0.0,
+                // },
+                // {
+                //     layer: 'gfw-alerts',
+                //     opacity: 0.0,
+                // },
+                // {
+                //     layer: 'rfo-limits-polygon',
+                //     opacity: 0.0,
+                // },  
+                // {
+                //     layer: 'active-exploitation-line',
+                //     opacity: 0.0,
+                // },
+                // {
+                //     layer: 'active-exploration-line',
+                //     opacity: 0.0,
+                // },
+                // {
+                //     layer: 'research-application-line',
+                //     opacity: 0.0,
+                // },  
+            ]
+        },
+        {
+            id: 'ch13',
+            alignment: 'center',
+            hidden: false,
+            title: 'A new frontier of semi-industrial mining opens in 2023',
+            // image: '../assets/rfo_gfw_alerts_confidence.gif',
+            description: 'In mid 2023, mining expanded into the Reserve along the western boundary. This extends from a heavily mined and prospected area just outside of the actual Okapi Reserve boundaries. Another concession holder, Ding Sheng, a Chinese company, has rapidly deforested and commenced alluvial mining on a much smaller river, but the consequences are already drastic, as viewed from satellite imagery.  has concessions and has rapidly explained  mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare-west.html" frameborder="0" scrolling="no" /></div>',
+            // location: {
+            //     center: [28.05570, 1.34050],
+            //     zoom: 10.0,
+            //     pitch: 8.01,
+            //     bearing: 0.00
+            // },
+            location: {
+                center: [28.0, 1.703],
+                zoom: 10,
+                pitch: 8.01,
+                bearing: 0.00
+            },
+            mosaic: 'Oct 2023',
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                // {
+                //     layer: 'rfo-tracks',
+                //     opacity: 0.6,
+                // },
+                // {
+                //     layer: 'gfw-alerts',
+                //     opacity: 0.5,
+                // },
                 {
-                    layer: 'rfo-tracks',
-                    opacity: 0.0,
+                    layer: 'rfo-limits-polygon',
+                    opacity: 0.2,
+                },  
+                {
+                    layer: 'active-exploitation-line',
+                    opacity: 0.5,
                 },
+                {
+                    layer: 'active-exploration-line',
+                    opacity: 0.5,
+                },
+                {
+                    layer: 'research-application-line',
+                    opacity: 0.5,
+                },              
+            ],
+            onChapterExit: [
+                // {
+                //     layer: 'rfo-tracks',
+                //     opacity: 0.0,
+                // },
                 {
                     layer: 'gfw-alerts',
                     opacity: 0.0,
@@ -658,10 +758,10 @@ var config = {
         {
             id: 'unesco',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             title: 'World Heritage in Danger',
             // image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
+            description: 'Since first publishing this storymap in April 2023, the mechanism which enabled the expansion of mining inside of a legal protected area, and the associated social, environmental, legal, and security implications have been further detailed by two important publications.<b> First, Mongabay published an article on Oct 13, 2023 entitled: <a href="https://news.mongabay.com/2023/10/its-a-real-mess-mining-and-deforestation-threaten-unparalleled-drc-wildlife-haven">It’s a real mess: Mining and deforestation threaten unparalleled DRC wildlife haven</a> shared a comprehensive overview of the current situation.<br>Second, International Peace Information Service (IPIS), a Belgian NGO published a report on Oct 27, 2023 that included field data collected at artisanal mines in the southwestern and western portions of the Reserve:<br><a href="https://ipisresearch.be/publication/mapping-of-artisanal-mining-sites-in-western-mambasa-ituri-province-democratic-republic-of-the-congo/">Mapping of artisanal mining sites in western Mambasa, Ituri Province, Democratic Republic of the Congo</a>. The IPIS report presented data in mid 2022, which documented the presence of state security services (Police, Army) at mines, acting as hired private security for Kimia Mining, a Chinese enterprise. The report also documented that the Ituri Province Mining Ministry and the Provincial Military Court have recognized the CAMI version of Okapi Reserve boundaries as well as the the concessions awarded inside of the Reserve.<br>The origin of the CAMI protected area boundary data is yet to be revealed and warrants further investigation.',
             location: {
                     center: [24, -1],
                     zoom: 5.8,
