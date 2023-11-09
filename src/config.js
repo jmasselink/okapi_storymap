@@ -569,7 +569,7 @@ var config = {
             id: 'ch11',
             alignment: 'right',
             hidden: false,
-            title: 'Mine expansion continues unabated causing permanent damages',
+            title: 'Satellite records show extensive damage',
             image: '../assets/rfo_gfw_alerts_confidence.gif',
             description: "<b><i>Planet mosaic imagery from April 2023<p>Points on the main map are Global Forest Watch integrated deforestation alerts between 2019-2023</b></i>",
             location: {
@@ -610,10 +610,6 @@ var config = {
                     opacity: 0.0,
                 },
                 {
-                    layer: 'rfo-limits-polygon',
-                    opacity: 0.0,
-                },  
-                {
                     layer: 'active-exploitation-line',
                     opacity: 0.0,
                 },
@@ -633,13 +629,7 @@ var config = {
             hidden: false,
             title: 'Mine expansion continues unabated causing permanent damages',
             // image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In 2023, the mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
-            // location: {
-            //     center: [28.05570, 1.34050],
-            //     zoom: 10.0,
-            //     pitch: 8.01,
-            //     bearing: 0.00
-            // },
+            description: 'Through late 2023, the mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare.html" frameborder="0" scrolling="no" /></div>',
             location: {
                 center: [28.06, 1.27003],//center: [28.00, 1.55003],
                 zoom: 11,
@@ -653,30 +643,6 @@ var config = {
             onChapterEnter: [            
             ],
             onChapterExit: [
-                // {
-                //     layer: 'rfo-tracks',
-                //     opacity: 0.0,
-                // },
-                // {
-                //     layer: 'gfw-alerts',
-                //     opacity: 0.0,
-                // },
-                // {
-                //     layer: 'rfo-limits-polygon',
-                //     opacity: 0.0,
-                // },  
-                // {
-                //     layer: 'active-exploitation-line',
-                //     opacity: 0.0,
-                // },
-                // {
-                //     layer: 'active-exploration-line',
-                //     opacity: 0.0,
-                // },
-                // {
-                //     layer: 'research-application-line',
-                //     opacity: 0.0,
-                // },  
             ]
         },
         {
@@ -685,7 +651,7 @@ var config = {
             hidden: false,
             title: 'A new frontier of semi-industrial mining opens in 2023',
             // image: '../assets/rfo_gfw_alerts_confidence.gif',
-            description: 'In mid 2023, mining expanded into the Reserve along the western boundary. This extends from a heavily mined and prospected area just outside of the actual Okapi Reserve boundaries. Another concession holder, Ding Sheng, a Chinese company, has rapidly deforested and commenced alluvial mining on a much smaller river, but the consequences are already drastic, as viewed from satellite imagery.  has concessions and has rapidly explained  mining complex continues to expand, ensuring permanent damages to the forest, as well as the Ituri River for local residents downstream. There will undoubtedly need to be extensive restoration efforts and hopefully, a halt to all semi-industrial mining, to ensure that the Okapi Reserve continues to support its wildlife and indigenous peoples.<p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare-west.html" frameborder="0" scrolling="no" /></div>',
+            description: 'In mid 2023, mining operations made further incursions into a new area of the Reserve along the western boundary. These mines extend from a heavily prospected area just outside of the Okapi Reserve`s actual boundaries. Another Chinese company and concession holder, Ding Sheng, has commenced alluvial mining and rapidly deforested along a river, as seen in the recent Planet monthly satellite imagery updates. This case further highlights the urgent need to resolve the problem of these illegal concessions. <p><i>In the comparison window below, you can select imagery from two different times in the dropdown menus. You can also zoom and pan to focus on specific areas.</i>' + '<br/><div class="video-container"><iframe src="nicfi-compare-west.html" frameborder="0" scrolling="no" /></div>',
             // location: {
             //     center: [28.05570, 1.34050],
             //     zoom: 10.0,
@@ -703,14 +669,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'rfo-tracks',
-                //     opacity: 0.6,
-                // },
-                // {
-                //     layer: 'gfw-alerts',
-                //     opacity: 0.5,
-                // },
                 {
                     layer: 'rfo-limits-polygon',
                     opacity: 0.2,
@@ -729,10 +687,10 @@ var config = {
                 },              
             ],
             onChapterExit: [
-                // {
-                //     layer: 'rfo-tracks',
-                //     opacity: 0.0,
-                // },
+                {
+                    layer: 'rfo-sw-tracks',
+                    opacity: 0.0,
+                },
                 {
                     layer: 'gfw-alerts',
                     opacity: 0.0,
@@ -761,7 +719,7 @@ var config = {
             hidden: false,
             title: 'World Heritage in Danger',
             // image: './path/to/image/source.png',
-            description: 'Since first publishing this storymap in April 2023, the mechanism which enabled the expansion of mining inside of a legal protected area, and the associated social, environmental, legal, and security implications have been further detailed by two important publications.<b> First, Mongabay published an article on Oct 13, 2023 entitled: <a href="https://news.mongabay.com/2023/10/its-a-real-mess-mining-and-deforestation-threaten-unparalleled-drc-wildlife-haven">It’s a real mess: Mining and deforestation threaten unparalleled DRC wildlife haven</a> shared a comprehensive overview of the current situation.<br>Second, International Peace Information Service (IPIS), a Belgian NGO published a report on Oct 27, 2023 that included field data collected at artisanal mines in the southwestern and western portions of the Reserve:<br><a href="https://ipisresearch.be/publication/mapping-of-artisanal-mining-sites-in-western-mambasa-ituri-province-democratic-republic-of-the-congo/">Mapping of artisanal mining sites in western Mambasa, Ituri Province, Democratic Republic of the Congo</a>. The IPIS report presented data in mid 2022, which documented the presence of state security services (Police, Army) at mines, acting as hired private security for Kimia Mining, a Chinese enterprise. The report also documented that the Ituri Province Mining Ministry and the Provincial Military Court have recognized the CAMI version of Okapi Reserve boundaries as well as the the concessions awarded inside of the Reserve.<br>The origin of the CAMI protected area boundary data is yet to be revealed and warrants further investigation.',
+            description: 'Since first publishing this storymap in April 2023, the mechanism which enabled the expansion of mining inside of a legal protected area, and the associated social, environmental, legal, and security implications have been further detailed by two important publications.<br> First, Mongabay published an article on Oct 13, 2023 entitled: <a href="https://news.mongabay.com/2023/10/its-a-real-mess-mining-and-deforestation-threaten-unparalleled-drc-wildlife-haven">It’s a real mess: Mining and deforestation threaten unparalleled DRC wildlife haven</a> shared a comprehensive overview of the current situation.<br>Second, International Peace Information Service (IPIS), a Belgian NGO published a report on Oct 27, 2023 that included field data collected at artisanal mines in the southwestern and western portions of the Reserve:<br><a href="https://ipisresearch.be/publication/mapping-of-artisanal-mining-sites-in-western-mambasa-ituri-province-democratic-republic-of-the-congo/">Mapping of artisanal mining sites in western Mambasa, Ituri Province, Democratic Republic of the Congo</a>. The IPIS report presented data in mid 2022, which documented the presence of state security services (Police, Army) at mines, acting as hired private security for Kimia Mining, a Chinese enterprise. The report also documented that the Ituri Province Mining Ministry and the Provincial Military Court have recognized the CAMI version of Okapi Reserve boundaries as well as the the concessions awarded inside of the Reserve.<br>The origin of the CAMI protected area boundary data is yet to be revealed and warrants further investigation.',
             location: {
                     center: [24, -1],
                     zoom: 5.8,
