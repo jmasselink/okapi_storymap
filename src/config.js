@@ -152,7 +152,7 @@ var config = {
             hidden: false,
             title: 'The Ituri Forest and Indigenous Communities',
             image: '../assets/JoelMasselink_Mbuti_Girls2.JPG',
-            description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for tens of thousands of years. They practice cultural ceremonies and rites, as subsist primarily through hunting and gathering. The Mbuti and Efe live in temporary settlements alternating between the outskirts of villages and deep within the forest. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they avoid hunting the okapi out of reverence for this animal.",
+            description: "The Ituri forest, located in northeastern DRC, is home to the Mbuti and Efe indigenous communities, who have lived there for tens of thousands of years. They practice cultural ceremonies and rites, and subsist primarily through hunting and gathering. The Mbuti and Efe live in temporary settlements moving between the outskirts of villages and deep within the forest. These communities have a deep respect for the okapi, a close relative of the giraffe, which primarily inhabits the dense, lowland areas of the Ituri forest. Despite being skilled hunters, they tend to avoid hunting the okapi out of reverence for this animal.",
             location: {
                 center: [28.131101, 1.531721],
                 zoom: 7,
